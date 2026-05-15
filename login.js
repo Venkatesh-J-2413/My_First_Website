@@ -4,22 +4,19 @@ function login(){
 
     let password = document.getElementById("password").value;
 
-    let savedEmail = localStorage.getItem("email");
-
-    let savedPassword = localStorage.getItem("password");
-
     let message = document.getElementById("message");
 
     if(email === "" || password === ""){
 
-        message.innerHTML = "Please fill all fields";
+        message.innerHTML = "Please fill all fields ❌";
 
         return;
     }
 
-    if(email === savedEmail && password === savedPassword){
+    // DEMO LOGIN
+    if(email === "test@gmail.com" && password === "1234"){
 
-        message.innerHTML = "Login Successful";
+        message.innerHTML = "Login Successful ✅";
 
         localStorage.setItem("loggedIn", "true");
 
